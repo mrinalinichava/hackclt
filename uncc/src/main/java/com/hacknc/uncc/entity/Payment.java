@@ -1,13 +1,12 @@
 package com.hacknc.uncc.entity;
 
-import com.hacknc.uncc.entity.Registration;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -30,11 +29,11 @@ public class Payment {
     
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private com.example.demo.entities.PaymentMethod paymentMethod;
+    private PaymentMethod paymentMethod;
     
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private com.example.demo.entities.PaymentStatus paymentStatus;
+    private PaymentStatus paymentStatus;
     
     @Column(unique = true)
     private String transactionId;
